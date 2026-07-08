@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - VELOCE MOTORS</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"><span class="cursor-text"></span></div>
+    
+    <div class="page-transition-curtain"></div>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo magnetic-wrap">VELOCE<span>.</span></a>
+            <div class="nav-links">
+                <a href="inventory.html" class="nav-link" style="color: var(--color-accent);">Inventory</a>
+                <a href="financing.html" class="nav-link">Financing</a>
+                <a href="trade-in.html" class="nav-link">Trade-In</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <a href="test-drive.html" class="btn btn-primary magnetic-wrap">Book Test Drive</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" style="padding-top: 100px;">
+        <section class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 280px 1fr; gap: 48px; align-items: start;">
+                    
+                    <!-- Sidebar Filters -->
+                    <aside class="glass" style="padding: 32px; border-radius: var(--radius-md); position: sticky; top: 120px;">
+                        <h3 class="text-h3" style="margin-bottom: 32px;">Filters</h3>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 12px; font-weight: 500; font-size: 0.875rem; text-transform: uppercase; color: var(--color-text-secondary);">Make</label>
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <label class="custom-checkbox"><input type="checkbox" value="Porsche"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Porsche</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" value="Tesla"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Tesla</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" value="BMW"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>BMW</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" value="Audi"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Audi</span></label>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 12px; font-weight: 500; font-size: 0.875rem; text-transform: uppercase; color: var(--color-text-secondary);">Body Type</label>
+                            <select style="width: 100%; padding: 12px; background: var(--color-bg-primary); border: 1px solid var(--border-glass); color: white; border-radius: 4px;">
+                                <option value="">All</option>
+                                <option value="Coupe">Coupe</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 12px; font-weight: 500; font-size: 0.875rem; text-transform: uppercase; color: var(--color-text-secondary);">Powertrain</label>
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <label class="custom-checkbox"><input type="checkbox" value="Electric"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Electric</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" value="Gasoline"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Gasoline</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" value="Hybrid"><div class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Hybrid</span></label>
+                            </div>
+                        </div>
+
+                        <button id="reset-filters" class="btn btn-secondary" style="width: 100%; padding: 8px;">Reset Filters</button>
+                    </aside>
+
+                    <!-- Inventory Main Area -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                            <div>
+                                <h1 class="text-h2" style="margin-bottom: 4px;">Premium Vehicles</h1>
+                                <p style="color: var(--color-text-secondary); margin: 0;">Showing <span id="result-count" style="color: white; font-weight: 600;">0</span> results</p>
+                            </div>
+                            
+                            <div style="display: flex; gap: 16px; align-items: center;">
+                                <select id="sort-select" style="padding: 10px 16px; background: var(--color-bg-elevated); border: 1px solid var(--border-glass); color: white; border-radius: var(--radius-pill); cursor: pointer;">
+                                    <option value="newest">Newest Additions</option>
+                                    <option value="price-asc">Price: Low to High</option>
+                                    <option value="price-desc">Price: High to Low</option>
+                                </select>
+                                
+                                <div style="display: flex; gap: 4px; background: var(--color-bg-elevated); padding: 4px; border-radius: var(--radius-pill); border: 1px solid var(--border-glass);">
+                                    <button class="btn-icon active" style="padding: 8px; border-radius: 50%; background: var(--color-bg-glass);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button>
+                                    <button class="btn-icon" style="padding: 8px; border-radius: 50%;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skeleton Loader (hidden by default, toggled in JS) -->
+                        <div id="skeleton-grid" class="grid grid-cols-2" style="display: none;">
+                            <div class="car-card skeleton" style="height: 400px;"></div>
+                            <div class="car-card skeleton" style="height: 400px;"></div>
+                            <div class="car-card skeleton" style="height: 400px;"></div>
+                            <div class="car-card skeleton" style="height: 400px;"></div>
+                        </div>
+
+                        <!-- Product Grid -->
+                        <div id="inventory-grid" class="grid grid-cols-2">
+                            <!-- Cards generated by JS -->
+                        </div>
+                        
+                        <!-- Load More -->
+                        <div class="text-center" style="margin-top: 64px;">
+                            <button id="load-more" class="btn btn-secondary magnetic-wrap">Load More Vehicles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Compare Bar -->
+    <div class="compare-bar">
+        <div><span id="compare-count" style="font-weight: 700;">0</span> vehicles selected</div>
+        <a href="compare.html" class="btn btn-primary" style="padding: 10px 24px;">Compare Now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 24px; display: inline-block;">VELOCE<span>.</span></a>
+                    <p>Elevating the standard of automotive excellence. Find your next premium vehicle with us.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Vehicles</h4>
+                    <div class="footer-links">
+                        <a href="inventory.html">All Inventory</a>
+                        <a href="#">Electric</a>
+                        <a href="#">Performance</a>
+                        <a href="#">SUVs</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <div class="footer-links">
+                        <a href="financing.html">Financing</a>
+                        <a href="trade-in.html">Trade-In</a>
+                        <a href="services.html">Maintenance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Third-party JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/inventory.js"></script>
+</body>
+</html>

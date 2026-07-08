@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCE MOTORS | Premium Car Dealership</title>
+    <meta name="description" content="Veloce Motors - Experience the future of driving. Award-winning premium car dealership featuring luxury, electric, and performance vehicles.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Third-party CSS (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"><span class="cursor-text"></span></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">VELOCE</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Page Transition Curtain -->
+    <div class="page-transition-curtain"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo magnetic-wrap">VELOCE<span>.</span></a>
+            
+            <div class="nav-links">
+                <a href="inventory.html" class="nav-link">Inventory</a>
+                <a href="financing.html" class="nav-link">Financing</a>
+                <a href="trade-in.html" class="nav-link">Trade-In</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn-icon magnetic-wrap" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="test-drive.html" class="btn btn-primary magnetic-wrap">Book Test Drive</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="section hero-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; z-index: var(--z-negative);">
+                <!-- Ambient Glow behind car -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80vw; height: 50vh; background: radial-gradient(circle, rgba(255,106,0,0.15) 0%, transparent 70%); filter: blur(60px); z-index: 1;"></div>
+                <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1920&q=80" alt="Dark luxury sports car" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; z-index: 2; position: relative;" class="hero-parallax-img">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: linear-gradient(to top, var(--color-bg-primary), transparent); z-index: 3;"></div>
+            </div>
+            
+            <div class="container text-center" style="position: relative; z-index: var(--z-normal); margin-top: 5vh;">
+                <h1 class="text-hero hero-title invisible-init" style="margin-bottom: 0;">DRIVE THE FUTURE</h1>
+                <p class="text-h3 hero-subtitle invisible-init" style="margin-bottom: 3rem; color: var(--color-text-secondary);">Precision. Performance. Pure Adrenaline.</p>
+                <div class="hero-actions invisible-init" style="display: flex; gap: 16px; justify-content: center;">
+                    <a href="inventory.html" class="btn btn-primary magnetic-wrap" data-cursor="View">Explore Inventory</a>
+                    <a href="test-drive.html" class="btn btn-secondary magnetic-wrap">Book Test Drive</a>
+                </div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge invisible-init" style="position: absolute; top: 30%; left: 10%;" data-speed="1.2">
+                <div class="glass" style="padding: 12px 24px; border-radius: 8px;">
+                    <span class="text-accent text-mono" style="font-size: 1.5rem; font-weight: 700;">2.4s</span>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">0-60 mph</div>
+                </div>
+            </div>
+            <div class="floating-badge invisible-init" style="position: absolute; bottom: 30%; right: 10%;" data-speed="0.8">
+                <div class="glass" style="padding: 12px 24px; border-radius: 8px;">
+                    <span class="text-accent text-mono" style="font-size: 1.5rem; font-weight: 700;">1020</span>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Horsepower</div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator invisible-init" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 10;">
+                <div style="width: 2px; height: 40px; background: rgba(255,255,255,0.2); margin: 0 auto; overflow: hidden; position: relative;">
+                    <div class="scroll-dot" style="position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: var(--color-accent);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Marquee -->
+        <div class="marquee-section" style="padding: 40px 0; border-bottom: 1px solid var(--border-glass); background: var(--color-bg-secondary); overflow: hidden;">
+            <div class="marquee-container" style="display: flex; white-space: nowrap;">
+                <div class="marquee-content" style="display: flex; gap: 80px; align-items: center; padding-right: 80px;">
+                    <span class="text-h3" style="color: var(--color-text-muted);">PORSCHE</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">TESLA</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">BMW</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">AUDI</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">MERCEDES-BENZ</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">RIVIAN</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-content" style="display: flex; gap: 80px; align-items: center; padding-right: 80px;">
+                    <span class="text-h3" style="color: var(--color-text-muted);">PORSCHE</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">TESLA</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">BMW</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">AUDI</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">MERCEDES-BENZ</span>
+                    <span class="text-h3" style="color: var(--color-text-muted);">RIVIAN</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Inventory Carousel -->
+        <section class="section">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;">
+                    <div>
+                        <h2 class="text-h2" style="margin-bottom: 8px;">Featured Vehicles</h2>
+                        <p style="margin: 0;">Handpicked selection of premium cars ready for delivery.</p>
+                    </div>
+                    <div style="display: flex; gap: 16px;">
+                        <button class="btn-icon swiper-prev glass magnetic-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                        <button class="btn-icon swiper-next glass magnetic-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                    </div>
+                </div>
+
+                <div class="swiper featured-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="car-card interactive" data-cursor="View">
+                                <div class="car-card-img-wrap">
+                                    <div class="badge-status" style="position: absolute; top: 16px; left: 16px; z-index: 2; background: var(--color-accent); color: #000; padding: 4px 12px; border-radius: 4px; font-weight: 600; font-size: 0.75rem;">NEW ARRIVAL</div>
+                                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Porsche 911" class="car-card-img">
+                                </div>
+                                <div class="car-card-content">
+                                    <div class="car-card-header">
+                                        <h3 class="car-card-title">2026 Porsche 911 GT3</h3>
+                                        <div class="car-card-price">$185,000</div>
+                                    </div>
+                                    <div class="car-card-specs">
+                                        <div class="car-card-spec"><span>502</span> hp</div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>RWD</span></div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>Gasoline</span></div>
+                                    </div>
+                                    <a href="vehicle-detail.html" class="btn btn-secondary" style="width: 100%; padding: 12px;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="car-card interactive" data-cursor="View">
+                                <div class="car-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80" alt="Tesla Model S" class="car-card-img">
+                                </div>
+                                <div class="car-card-content">
+                                    <div class="car-card-header">
+                                        <h3 class="car-card-title">2025 Tesla Model S Plaid</h3>
+                                        <div class="car-card-price">$108,490</div>
+                                    </div>
+                                    <div class="car-card-specs">
+                                        <div class="car-card-spec"><span>1,020</span> hp</div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>AWD</span></div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec text-accent-2" style="color: var(--color-accent-2);"><span>Electric</span></div>
+                                    </div>
+                                    <a href="vehicle-detail.html" class="btn btn-secondary" style="width: 100%; padding: 12px;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="car-card interactive" data-cursor="View">
+                                <div class="car-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="BMW M4" class="car-card-img">
+                                </div>
+                                <div class="car-card-content">
+                                    <div class="car-card-header">
+                                        <h3 class="car-card-title">2026 BMW M4 Competition</h3>
+                                        <div class="car-card-price">$89,200</div>
+                                    </div>
+                                    <div class="car-card-specs">
+                                        <div class="car-card-spec"><span>503</span> hp</div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>AWD</span></div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>Gasoline</span></div>
+                                    </div>
+                                    <a href="vehicle-detail.html" class="btn btn-secondary" style="width: 100%; padding: 12px;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="car-card interactive" data-cursor="View">
+                                <div class="car-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1563720225167-77eb931e21b7?auto=format&fit=crop&w=800&q=80" alt="Audi RS e-tron GT" class="car-card-img">
+                                </div>
+                                <div class="car-card-content">
+                                    <div class="car-card-header">
+                                        <h3 class="car-card-title">2025 Audi RS e-tron GT</h3>
+                                        <div class="car-card-price">$147,100</div>
+                                    </div>
+                                    <div class="car-card-specs">
+                                        <div class="car-card-spec"><span>637</span> hp</div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec"><span>AWD</span></div>
+                                        <div class="car-card-spec">&bull;</div>
+                                        <div class="car-card-spec text-accent-2" style="color: var(--color-accent-2);"><span>Electric</span></div>
+                                    </div>
+                                    <a href="vehicle-detail.html" class="btn btn-secondary" style="width: 100%; padding: 12px;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid / Why Choose Us -->
+        <section class="section" style="background-color: var(--color-bg-secondary);">
+            <div class="container">
+                <div class="text-center" style="max-width: 600px; margin: 0 auto 64px;">
+                    <h2 class="text-h2">Redefining the Dealership Experience</h2>
+                    <p>We combine digital convenience with white-glove personal service to make acquiring your next vehicle effortless.</p>
+                </div>
+                
+                <div class="bento-grid">
+                    <!-- Bento Item 1 (Wide) -->
+                    <div class="bento-card bento-wide interactive" data-cursor="Explore">
+                        <div class="bento-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="text-h3 bento-card-title">Certified Pre-Owned Excellence</h3>
+                        <p>Every vehicle undergoes a rigorous 150-point inspection by our master technicians. We only accept the top 5% of trade-ins for our premium inventory.</p>
+                    </div>
+                    
+                    <!-- Bento Item 2 (Tall) -->
+                    <div class="bento-card bento-tall interactive" data-cursor="View">
+                        <div class="bento-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h3 class="text-h3 bento-card-title">Instant Financing</h3>
+                        <p>Get pre-approved in seconds. Our digital finance platform compares rates from over 40 premium lenders to secure your best terms without affecting your credit score.</p>
+                        <div style="margin-top: 24px;">
+                            <a href="financing.html" class="text-accent" style="font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Calculate Rate <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Bento Item 3 (Small) -->
+                    <div class="bento-card interactive" data-cursor="View">
+                        <div class="bento-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3 class="text-h3 bento-card-title">Secure & Transparent</h3>
+                        <p>No hidden fees. The price you see is the price you pay, guaranteed.</p>
+                    </div>
+
+                    <!-- Bento Item 4 (Small) -->
+                    <div class="bento-card interactive" data-cursor="View">
+                        <div class="bento-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3 class="text-h3 bento-card-title">24/7 Concierge Support</h3>
+                        <p>Our dedicated support team is available around the clock.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="section" style="border-bottom: 1px solid var(--border-glass);">
+            <div class="container">
+                <div class="grid grid-cols-4 text-center">
+                    <div>
+                        <div class="text-hero text-mono text-accent"><span class="counter" data-target="2500">0</span>+</div>
+                        <div class="text-uppercase" style="letter-spacing: 2px; font-size: 0.875rem;">Vehicles Delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-hero text-mono text-accent"><span class="counter" data-target="15">0</span></div>
+                        <div class="text-uppercase" style="letter-spacing: 2px; font-size: 0.875rem;">Years of Excellence</div>
+                    </div>
+                    <div>
+                        <div class="text-hero text-mono text-accent"><span class="counter" data-target="40">0</span>+</div>
+                        <div class="text-uppercase" style="letter-spacing: 2px; font-size: 0.875rem;">Lending Partners</div>
+                    </div>
+                    <div>
+                        <div class="text-hero text-mono text-accent"><span class="counter" data-target="4.9">0</span></div>
+                        <div class="text-uppercase" style="letter-spacing: 2px; font-size: 0.875rem;">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Configurator Teaser -->
+        <section class="section" style="background-color: var(--color-bg-primary); overflow: hidden;">
+            <div class="container">
+                <div class="grid grid-cols-2" style="align-items: center; gap: 64px;">
+                    <div>
+                        <h2 class="text-h1" style="margin-bottom: 24px;">Build Your Dream.</h2>
+                        <p style="font-size: 1.125rem; margin-bottom: 32px;">Experience our interactive configurator. Select trims, choose colors, and visualize your perfect vehicle before making it a reality.</p>
+                        
+                        <div style="margin-bottom: 32px;">
+                            <div style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: var(--color-text-secondary);">Select Exterior Color:</div>
+                            <div style="display: flex; gap: 16px;">
+                                <button class="color-swatch active magnetic-wrap" style="width: 32px; height: 32px; border-radius: 50%; background: #CC0000; border: 2px solid white; box-shadow: 0 0 0 2px transparent; transition: all 0.3s;" data-color="red"></button>
+                                <button class="color-swatch magnetic-wrap" style="width: 32px; height: 32px; border-radius: 50%; background: #1A1A1A; border: 2px solid #333; box-shadow: 0 0 0 2px transparent; transition: all 0.3s;" data-color="black"></button>
+                                <button class="color-swatch magnetic-wrap" style="width: 32px; height: 32px; border-radius: 50%; background: #F5F5F5; border: 2px solid #DDD; box-shadow: 0 0 0 2px transparent; transition: all 0.3s;" data-color="white"></button>
+                                <button class="color-swatch magnetic-wrap" style="width: 32px; height: 32px; border-radius: 50%; background: #0033A0; border: 2px solid #002266; box-shadow: 0 0 0 2px transparent; transition: all 0.3s;" data-color="blue"></button>
+                            </div>
+                        </div>
+                        
+                        <a href="inventory.html" class="btn btn-secondary magnetic-wrap">Start Building</a>
+                    </div>
+                    
+                    <div style="position: relative;" class="configurator-image-wrap">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%); z-index: 1;"></div>
+                        <!-- We use a transparent PNG or highly stylized side profile image that we tint via CSS filter or swap src for the demo -->
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" id="config-car-img" style="width: 100%; border-radius: 16px; position: relative; z-index: 2; transition: filter 0.5s ease;" alt="Configurable Car">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="section" style="padding: 160px 0; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: var(--z-negative); background: var(--gradient-hero);"></div>
+            <!-- Pattern overlay -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: radial-gradient(var(--color-text-primary) 1px, transparent 1px); background-size: 24px 24px; z-index: var(--z-negative);"></div>
+            
+            <div class="container text-center" style="position: relative; z-index: 1;">
+                <h2 class="text-hero" style="margin-bottom: 24px;">Ready to Drive?</h2>
+                <p class="text-h3" style="max-width: 600px; margin: 0 auto 48px; color: rgba(255,255,255,0.8);">Schedule a VIP test drive experience or start your financing application today.</p>
+                <div style="display: flex; gap: 16px; justify-content: center;">
+                    <a href="inventory.html" class="btn btn-primary magnetic-wrap" style="background: white; color: black; box-shadow: none;">View Inventory</a>
+                    <a href="financing.html" class="btn btn-secondary magnetic-wrap" style="border-color: rgba(255,255,255,0.3); color: white;">Get Financed</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 24px; display: inline-block;">VELOCE<span>.</span></a>
+                    <p>Elevating the standard of automotive excellence. Find your next premium vehicle with us.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Vehicles</h4>
+                    <div class="footer-links">
+                        <a href="inventory.html">All Inventory</a>
+                        <a href="#">Electric</a>
+                        <a href="#">Performance</a>
+                        <a href="#">SUVs</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <div class="footer-links">
+                        <a href="financing.html">Financing</a>
+                        <a href="trade-in.html">Trade-In</a>
+                        <a href="services.html">Maintenance</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <p style="font-size: 0.875rem; margin-bottom: 16px;">Subscribe for the latest arrivals and exclusive offers.</p>
+                    <form style="display: flex; gap: 8px;">
+                        <input type="email" placeholder="Email address" style="padding: 12px 16px; border-radius: var(--radius-pill); border: 1px solid var(--border-glass); background: transparent; color: white; width: 100%;">
+                        <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Third-party JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VELOCE MOTORS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body style="height: 100vh; overflow: hidden; display: flex;">
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"><span class="cursor-text"></span></div>
+    <div class="page-transition-curtain"></div>
+
+    <a href="index.html" class="brand-logo magnetic-wrap" style="position: absolute; top: 32px; left: 32px; z-index: 10;">VELOCE<span>.</span></a>
+
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="width: 100%; max-width: 400px; padding: 32px;">
+            <h1 class="text-h2" style="margin-bottom: 8px;">Welcome Back</h1>
+            <p style="color: var(--color-text-secondary); margin-bottom: 48px;">Enter your credentials to access your account.</p>
+            
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input interactive" required>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between;">
+                        <label class="form-label">Password</label>
+                        <a href="#" style="font-size: 0.875rem; color: var(--color-accent);">Forgot password?</a>
+                    </div>
+                    <input type="password" class="form-input interactive" required>
+                </div>
+                <button type="button" onclick="window.location.href='dashboard.html'" class="btn btn-primary magnetic-wrap" style="width: 100%; margin-bottom: 24px;">Sign In</button>
+            </form>
+            
+            <p style="text-align: center; color: var(--color-text-secondary); font-size: 0.875rem;">Don't have an account? <a href="signup.html" style="color: white; font-weight: 600;">Sign up</a></p>
+        </div>
+    </div>
+
+    <div style="flex: 1; position: relative; background: var(--color-bg-secondary);">
+        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1000&q=80" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

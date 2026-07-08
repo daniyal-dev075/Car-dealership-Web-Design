@@ -1,0 +1,71 @@
+/* css/variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+:root {
+  /* Base Colors */
+  --color-bg-primary: #0A0A0C;
+  --color-bg-secondary: #121216;
+  --color-bg-elevated: #1A1A1F;
+  --color-bg-glass: rgba(255, 255, 255, 0.04);
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Accent - Electric Amber */
+  --color-accent: #FF6A00;
+  --color-accent-hover: #FF8A33;
+  --color-accent-muted: rgba(255, 106, 0, 0.15);
+
+  /* Secondary Accent */
+  --color-accent-2: #00E0A4;
+
+  /* Text Colors */
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #A0A0A8;
+  --color-text-muted: #6B6B72;
+
+  /* Status Colors */
+  --color-success: #22C55E;
+  --color-warning: #FBBF24;
+  --color-error: #EF4444;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #0A0A0C 0%, #1A1A1F 60%, #FF6A00 140%);
+  --gradient-card-glow: radial-gradient(circle at top left, rgba(255, 106, 0, 0.15), transparent 60%);
+
+  /* Typography */
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Fluid Typography Scale */
+  --fs-hero: clamp(3rem, 7vw, 7rem);
+  --fs-h1: clamp(2.25rem, 4vw, 3.75rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body: clamp(1rem, 1vw, 1.125rem);
+  --fs-small: 0.875rem;
+
+  /* Layout */
+  --container-max: 1440px;
+  --gutter: 24px;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-normal: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* Z-Index */
+  --z-negative: -1;
+  --z-normal: 1;
+  --z-above: 10;
+  --z-sticky: 100;
+  --z-overlay: 1000;
+  --z-modal: 2000;
+  --z-cursor: 9999;
+}
